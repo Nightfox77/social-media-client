@@ -17,6 +17,7 @@
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
     "live-server": "^1.2.2",
+    "prettier": "^3.3.3",
     "sass": "^1.54.8"
   },
   "dependencies": {
