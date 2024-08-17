@@ -1,14 +1,13 @@
 import cypressPlugin from 'eslint-plugin-cypress';
-import jestPlugin from 'eslint-plugin-jest';
 import globals from 'globals';
+import eslintRecommended from '@eslint/js';
 
 export default [
   {
+    // Define global environments and language options
     languageOptions: {
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -16,13 +15,28 @@ export default [
         ...globals.jest,
       },
     },
+    // ESLint recommended rules
+    ...eslintRecommended.configs.recommended,
+
+    // Base ESLint rules
+    rules: {
+      'no-unused-vars': 'error',
+    },
+  },
+  {
+    // Override configuration specifically for Cypress test files
+    files: ['**/*.cy.js'],
+    languageOptions: {
+      globals: {
+        ...globals.cypress,
+      },
+    },
     plugins: {
-      jest: jestPlugin,
       cypress: cypressPlugin,
     },
     rules: {
-      'no-unused-vars': 'off',
       'cypress/no-unnecessary-waiting': 'off',
+      'no-unused-vars': 'off',
     },
   },
 ];
