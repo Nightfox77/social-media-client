@@ -2,6 +2,7 @@ import cypressPlugin from 'eslint-plugin-cypress';
 import globals from 'globals';
 import eslintRecommended from '@eslint/js';
 
+
 export default [
   {
     // Define global environments and language options
@@ -15,7 +16,10 @@ export default [
         ...globals.jest,
       },
     },
-    // ESLint recommended rules
+    plugins: {
+      // Include Jest plugin here if needed
+    },
+    // Include ESLint recommended rules
     ...eslintRecommended.configs.recommended,
 
     // Base ESLint rules
@@ -24,7 +28,7 @@ export default [
     },
   },
   {
-    // Override configuration specifically for Cypress test files
+    // Configuration specific to Cypress files
     files: ['**/*.cy.js'],
     languageOptions: {
       globals: {
