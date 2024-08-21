@@ -42,6 +42,7 @@ describe("login", () => {
       JSON.stringify("sampleToken"),
     );
   });
+
   it("shows an error when login fails", async () => {
     fetch.mockResolvedValueOnce({
       ok: false,
@@ -52,6 +53,7 @@ describe("login", () => {
       "Unauthorized",
     );
   });
+
   it("shows an specific error for an invalid username when user name is invalid", async () => {
     fetch.mockResolvedValueOnce({
       ok: false,
@@ -65,6 +67,7 @@ describe("login", () => {
       "Invalid username",
     );
   });
+
   it("shows an specific error for a invalid password when user password is invalid", async () => {
     fetch.mockResolvedValueOnce({
       ok: false,
