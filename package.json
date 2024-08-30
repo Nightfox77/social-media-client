@@ -47,9 +47,6 @@
     "*.scss": [
       "prettier --write"
     ],
-    "!cypress.config.js": []  
+    "!cypress.config.js": []
   }
-  
 }
-
-

@@ -1,14 +1,13 @@
-import cypressPlugin from 'eslint-plugin-cypress';
-import globals from 'globals';
-import eslintRecommended from '@eslint/js';
-
+import cypressPlugin from "eslint-plugin-cypress";
+import globals from "globals";
+import eslintRecommended from "@eslint/js";
 
 export default [
   {
     // Define global environments and language options
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -24,12 +23,12 @@ export default [
 
     // Base ESLint rules
     rules: {
-      'no-unused-vars': 'error',
+      "no-unused-vars": "error",
     },
   },
   {
     // Configuration specific to Cypress files
-    files: ['**/*.cy.js'],
+    files: ["**/*.cy.js"],
     languageOptions: {
       globals: {
         ...globals.cypress,
@@ -39,8 +38,8 @@ export default [
       cypress: cypressPlugin,
     },
     rules: {
-      'cypress/no-unnecessary-waiting': 'off',
-      'no-unused-vars': 'off',
+      "cypress/no-unnecessary-waiting": "off",
+      "no-unused-vars": "off",
     },
   },
 ];
