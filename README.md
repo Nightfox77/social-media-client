@@ -1,12 +1,11 @@
-# Your project title
+Workflow course assignment/ social media client
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
-
-A simple overview of the use/purpose of the project.
+![image](screenshot%20social%20media%20client.png)
+I forked this repository from the noroff social media client repository.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+I was tasked to improve the social media client by creating a workflow that would help to make the project more efficient.
 
 You can add some bullet points if you'd like to:
 
