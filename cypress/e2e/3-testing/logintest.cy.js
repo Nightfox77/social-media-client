@@ -9,7 +9,6 @@ describe("Login Functionality", () => {
         cy.get('button[data-bs-target="#loginModal"]').should("exist").click();
       });
 
-    // Ensure the login form is visible
     cy.get("#loginForm")
       .should("be.visible")
       .within(() => {
@@ -26,7 +25,7 @@ describe("Login Functionality", () => {
       expect(token).not.to.be.empty;
     });
   });
-  it("should deny access and show errormessage when presented invalid login credentials", () => {
+  it("should deny access and show errormessage when presented with invalid login credentials", () => {
     cy.visit("/");
 
     cy.get("#registerModal")
@@ -36,7 +35,6 @@ describe("Login Functionality", () => {
         cy.get('button[data-bs-target="#loginModal"]').should("exist").click();
       });
 
-    // Ensure the login form is visible
     cy.get("#loginForm")
       .should("be.visible")
       .within(() => {
