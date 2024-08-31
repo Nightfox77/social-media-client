@@ -1,4 +1,4 @@
-Workflow course assignment/ social media client
+### Workflow course assignment/ social media client
 
 ![image](screenshot%20social%20media%20client.png)
 I forked this repository from the noroff social media client repository.
