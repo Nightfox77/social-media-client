@@ -42,8 +42,21 @@ npm run start
 ```
 ### Running
 To run both tests (cypress && jest)
+
 ```
-npm run 
+npm run test
 ```
+Just the jest tests
+
+```
+npm run test-unit
+```
+Just the cypress tests
+
+```
+npm run test-e2e-cli
+```
+
+
 
 
